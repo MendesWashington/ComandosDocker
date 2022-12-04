@@ -17,12 +17,22 @@ $ docker run
 ```
 - Comando para execução um `container`.
 ```
-$ docker start <id/name_container>
+$ docker start <id_container/name_container>
 ```
 
 - Comando para finalizar a execução de um `container`.
 ```
-$ docker stop <id/name_container>
+$ docker stop <id_container/name_container>
+```
+
+- Comando para pausar a execução de um `container`.
+```
+$ docker pause <id_container/name_container>
+```
+
+- Comando para continuar a execução de um `container` após o pause.
+```
+$ docker unpause <id_container/name_container>
 ```
 
 - Comando para listar `imagens`.
@@ -46,3 +56,32 @@ $ docker run <nome_container> sleep 1d
 $ docker run -it <nome_container> bash
 ```
 
+- Comando para executar o `container` sem travar o terminal.
+```
+$ docker run -d <id_container/nome_container> 
+```
+
+- Comando para remover um `container`.
+```
+$ docker rm <id_container/nome_container>
+```
+
+- Comando para remover e parar um `container`.
+```
+$ docker rm <id_container/nome_container> --force
+```
+
+- Comando para mapear porta de um `container` com o pc.
+```
+$ docker -d -P <id_container/nome_container>
+```
+
+- Comando para mostrar mapeamento da porta de um `container`.
+```
+$ docker port <id_container/nome_container>
+```
+
+- Comando para mapear a porta de um `container` com o pc no momento de sua execução.
+```
+$ docker run -d -p <porta_pc>:<porta_container> <nome_container>
+```
