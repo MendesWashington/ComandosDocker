@@ -85,3 +85,18 @@ $ docker port <id_container/nome_container>
 ```
 $ docker run -d -p <porta_pc>:<porta_container> <nome_container>
 ```
+
+- Comando para visualizar especificações de uma`imagem`.
+```
+$ docker images
+```
+
+- Comando para inspecionar uma`imagem`.
+```
+$ docker inspect <id_Imagem>
+```
+
+- Comando para visualizar as camadas de uma`imagem`.
+```
+$ docker history <id_Imagem>
+```
