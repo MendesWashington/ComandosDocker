@@ -100,3 +100,8 @@ $ docker inspect <id_Imagem>
 ```
 $ docker history <id_Imagem>
 ```
+
+- Comando para remover todos os containers.
+```
+$ docker history rm $(docker container ls -aq)
+```
