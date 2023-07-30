@@ -101,7 +101,32 @@ $ docker inspect <id_Imagem>
 $ docker history <id_Imagem>
 ```
 
-- Comando para remover todos os containers.
+- Comando para remover todos os `containers`.
 ```
 $ docker history rm $(docker container ls -aq)
+```
+
+- Inspecionar configurações do `container`
+```
+$ docker inspect <id_Imagem>
+```
+
+- Listar todas as `networks`
+```
+$ docker network ls
+```
+
+- Executar container com uma `network` setada
+```
+$ docker run -d --network <nome_network> <nome_container>
+```
+
+- Criando  uma `network` do tipo bridge
+```
+$ docker network create --driver bridge <nome_bridge>
+```
+
+- Executando uma imagem e editando o nome da `imagem`
+```
+$ docker run -d --network <nome_network> --name <novo_nome_imagem> <nome_imagem>
 ```
