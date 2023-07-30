@@ -128,5 +128,5 @@ $ docker network create --driver bridge <nome_bridge>
 
 - Executando uma imagem e editando o nome da `imagem`
 ```
-$ docker run -d --network <nome_network> --name <novo_nome_imagem> <nome_imagem>
+$ docker run -d --network <nome_network> --name <novo_nome_imagem> -p <porta>:<porta> <nome_imagem>
 ```
